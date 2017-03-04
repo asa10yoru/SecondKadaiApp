@@ -2,7 +2,7 @@
 //  ResultViewController.swift
 //  SecondKadaiApp
 //
-//  Created by ぽんじゅうす on 2017/03/04.
+//  Created by 田中 on 2017/03/04.
 //  Copyright © 2017年 asa10yoru. All rights reserved.
 //
 
@@ -12,19 +12,13 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
-    // 受け取るためのプロパティ（変数）を宣言しておく
-    var x:String?
+    var myName:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
-        // 上記では、x, y を 0 と宣言していたが、
-        // 1画面目のViewControllerから遷移するときにprepareForSegueで
-        // x, yの値を新たに代入されたので両方共 1 が入っている
-        let result = x
-        label.text = "こんにちは、 \(result!) さん"
+        //let result = myName
+        label.text = "こんにちは、 \(myName!) さん"
     }
     
     override func didReceiveMemoryWarning() {

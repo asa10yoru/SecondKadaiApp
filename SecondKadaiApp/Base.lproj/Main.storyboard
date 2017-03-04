@@ -50,7 +50,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mytext" destination="9mn-XB-5eL" id="IhN-u8-bFj"/>
+                        <outlet property="myText" destination="9mn-XB-5eL" id="M3J-SQ-wDE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
