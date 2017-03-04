@@ -30,7 +30,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-bP-gxT">
                                 <rect key="frame" x="0.0" y="166" width="600" height="30"/>
-                                <state key="normal" title="送　信"/>
+                                <state key="normal" title="送 信"/>
                                 <connections>
                                     <segue destination="y5k-Gh-tPs" kind="show" id="gZ8-bV-LJg"/>
                                 </connections>
@@ -49,6 +49,9 @@
                             <constraint firstItem="rRU-bP-gxT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dE9-hQ-Vep"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mytext" destination="9mn-XB-5eL" id="IhN-u8-bFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,22 +69,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEe-Va-txS">
-                                <rect key="frame" x="0.0" y="161" width="600" height="30"/>
-                                <state key="normal" title="送　信"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEe-Va-txS">
+                                <rect key="frame" x="0.0" y="151" width="600" height="30"/>
+                                <state key="normal" title="戻 る"/>
                                 <connections>
                                     <segue destination="gBH-An-adQ" kind="unwind" unwindAction="unwind:" id="PUH-US-9Zf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-xQ-pa0">
-                                <rect key="frame" x="0.0" y="96" width="600" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-xQ-pa0">
+                                <rect key="frame" x="0.0" y="90" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nEe-Va-txS" firstAttribute="leading" secondItem="95e-DO-FvZ" secondAttribute="leading" id="CI1-eb-XpF"/>
+                            <constraint firstAttribute="trailing" secondItem="mYC-xQ-pa0" secondAttribute="trailing" id="OWy-I5-kXi"/>
+                            <constraint firstItem="mYC-xQ-pa0" firstAttribute="top" secondItem="76e-dr-uSB" secondAttribute="bottom" constant="70" id="fdW-1o-VsY"/>
+                            <constraint firstItem="mYC-xQ-pa0" firstAttribute="leading" secondItem="95e-DO-FvZ" secondAttribute="leading" id="lQ0-DT-Vcw"/>
+                            <constraint firstAttribute="trailing" secondItem="nEe-Va-txS" secondAttribute="trailing" id="qO8-q2-KWg"/>
+                            <constraint firstItem="nEe-Va-txS" firstAttribute="top" secondItem="mYC-xQ-pa0" secondAttribute="bottom" constant="40" id="vby-1j-XsI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="mYC-xQ-pa0" id="VaK-Sd-THx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPO-Y9-P5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gBH-An-adQ" userLabel="Exit" sceneMemberID="exit"/>
